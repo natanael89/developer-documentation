@@ -4,17 +4,17 @@ FieldTypes, like any other eZ Platform extensions, must be provided as Symfony 2
 
 Once you have [installed eZ Platform](../../getting_started/install_ez_platform/), including the creation of a database for the tutorial, [configured your server](../../getting_started/requirements_and_system_configuration/), and [started your web server](../../getting_started/starting_ez_platform/#web-server), you need to create a code base for the tutorial.
 
-We will use [the Symfony 2 extension mechanism, bundles,](http://symfony.com/doc/current/bundles.html) to wrap the Fieldtype. You can get started with a bundle using the built-in Symfony 2 bundle generator, following the instructions on this page.
+We will use [the Symfony 3 extension mechanism, bundles,](http://symfony.com/doc/current/bundles.html) to wrap the Fieldtype. You can get started with a bundle using the built-in Symfony 3 bundle generator, following the instructions on this page.
 Then you will configure your Bundle to be able to write the code you need to create a Field Type.
 
-The [tutorial's Github repository](https://github.com/ezsystems/TweetFieldTypeBundle) shows you the Bundle in a finished state.
+The [tutorial's Github repository](https://github.com/ezsystems/TweetFieldTypeBundle/tree/v2) shows you the Bundle in a finished state.
 
 ## Generate the bundle
 
 From the eZ Platform root, run the following:
 
 ``` bash
-php app/console generate:bundle
+php bin/console generate:bundle
 ```
 
 First, you are asked:
@@ -87,12 +87,12 @@ The tests aren't part of the documentation, but you can find them in the reposit
 
 ## Structure the bundle
 
-At this point, you have a basic application-specific Symfony 2 bundle. Let’s start by creating the structure for your Field Type.
+At this point, you have a basic application-specific Symfony 3 bundle. Let’s start by creating the structure for your Field Type.
 
 To make it easier to move around the code, you will to some extent mimic the structure that is used in the kernel of eZ Platform. Native Field Types are located inside `ezpublish-kernel` (in `vendor/ezsystems`), in the `eZ/Publish/Core/FieldType` folder.
 Each Field Type has its own subfolder: `TextLine`, `Email`, `Url`, etc.
 
-Clone this GitHub repository to follow this tutorial, it will be useful: (https://github.com/ezsystems/TweetFieldTypeBundle).
+Clone this GitHub repository to follow this tutorial, it will be useful: (https://github.com/ezsystems/TweetFieldTypeBundle/tree/v2).
 
 You will use a structure quite close to this:
 
